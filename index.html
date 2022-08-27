@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEU CONTADOR</title>
+    <style>
+         body {
+           min-height: 100vh;
+           background: black;
+           color: white;
+           display: grid;
+           place-items: center;
+        }
+        .container{
+            background: rgb(90, 90, 83);
+            padding: 50px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        p{
+            font-size: 45px;
+        }
+        .bt{
+            border-color:#3a3939;
+            background: white;
+            color:rgb(22, 22, 22);
+            border-radius:4px;
+            width: 90px;
+            height: 28px;
+        }
+    </style>
+</head>
+<body>
+    <div class= "container">
+    <font size="6" <font face="Times">CONTADOR</font> <br />
+    <p id="contador"></p>
+    
+    <button class="bt bt-vd" onclick= "diminuir()">DIMINUIR</button>
+    <button class= "bt bt-vd" onclick="zerar()">ZERAR</button>
+    <button class= "bt bt-vd" onclick="aumentar()">AUMENTAR</button>
+   
+    
+
+    <script>
+//estado da aplicação
+        let numero = 0
+
+//alteradores
+        function aumentar(){
+        numero = numero + 1
+        Tela()
+        }
+
+        function diminuir(){
+        numero = numero - 1
+        Tela()
+        }
+
+        function zerar(){
+        numero = numero = 0
+        Tela()
+        }
+
+
+        function Tela(){
+            const p = document.querySelector("#contador")
+            p.innerText = numero
+        }
+    </script>
+
+</body>
+</html>
